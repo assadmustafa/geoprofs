@@ -13,6 +13,13 @@ namespace GeoProfs.Models
         vakantie = 2, 
         anders = 3
     }
+
+    public enum status
+    {
+        ziekgoedgekeurd,
+        afgekeurd,
+        processing
+    }
     public class Verlofaanvraag
     {
         public int ID { get; set; }
@@ -31,6 +38,7 @@ namespace GeoProfs.Models
         public Werknemer Werkenemer { get; set; }
         [Display(Name = "Reden")]
         public verlof_reden? verlof_reden { get; set; }
+        public status? status { get; set; }
 
     }
 }
