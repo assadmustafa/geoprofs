@@ -1,0 +1,56 @@
+﻿@model GeoProfs.Models.Verlofaanvraag
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Verlofaanvraag</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="werknemer_ID" class="control-label">ID</label>
+                <input asp-for="werknemer_ID" class="form-control" />
+                <span asp-validation-for="werknemer_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="begin_datum" class="control-label">Begin datum</label>
+                <input asp-for="begin_datum" class="form-control" />
+                <span asp-validation-for="begin_datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="eind_datum" class="control-label">Eind datum</label>
+                <input asp-for="eind_datum" class="form-control" />
+                <span asp-validation-for="eind_datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="beschrijving" class="control-label">Beschrijving</label>
+                <input asp-for="beschrijving" class="form-control"/>
+                <span asp-validation-for="beschrijving" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="verlof_reden" class="control-label">Waarom wilt u een verlof aanvragen?</label>
+                @Html.DropDownListFor(m => m.verlof_reden, new List<SelectListItem>
+                { new SelectListItem{Text="Ziek", Value="ziek"},
+                new SelectListItem{Text="Persoonlijk", Value="persoonlijk"},
+                new SelectListItem{Text="Vakantie", Value="vakantie"},
+                new SelectListItem{Text="Anders", Value="anders"}}, "Reden..")
+                <span asp-validation-for="verlof_reden" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Aanvragen" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Annuleren</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

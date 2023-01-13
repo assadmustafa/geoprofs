@@ -1,0 +1,78 @@
+﻿@model GeoProfs.Models.Werknemer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Werknemer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="functie_ID" class="control-label"></label>
+                <input asp-for="functie_ID" class="form-control" />
+                <span asp-validation-for="functie_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="voornaam" class="control-label"></label>
+                <input asp-for="voornaam" class="form-control" />
+                <span asp-validation-for="voornaam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="achternaam" class="control-label"></label>
+                <input asp-for="achternaam" class="form-control" />
+                <span asp-validation-for="achternaam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="geboortedatum" class="control-label"></label>
+                <input asp-for="geboortedatum" class="form-control" />
+                <span asp-validation-for="geboortedatum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BSN" class="control-label"></label>
+                <input asp-for="BSN" class="form-control" />
+                <span asp-validation-for="BSN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="telefoonnummer" class="control-label"></label>
+                <input asp-for="telefoonnummer" class="form-control" />
+                <span asp-validation-for="telefoonnummer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="wachtwoord" class="control-label"></label>
+                <input asp-for="wachtwoord" class="form-control" />
+                <span asp-validation-for="wachtwoord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="contract_uren" class="control-label"></label>
+                <input asp-for="contract_uren" class="form-control" />
+                <span asp-validation-for="contract_uren" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="uurloon" class="control-label"></label>
+                <input asp-for="uurloon" class="form-control" />
+                <span asp-validation-for="uurloon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
