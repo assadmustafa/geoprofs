@@ -54,7 +54,7 @@ namespace GeoProfs.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,werknemer_ID,begin_datum,eind_datum,beschrijving,verlof_reden")] Verlofaanvraag verlofaanvraag)
+        public async Task<IActionResult> Create([Bind("ID,werknemer_ID,begin_datum,eind_datum,beschrijving,verlof_reden,status")] Verlofaanvraag verlofaanvraag)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace GeoProfs.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,werknemer_ID,begin_datum,eind_datum,beschrijving,verlof_reden")] Verlofaanvraag verlofaanvraag)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,werknemer_ID,begin_datum,eind_datum,beschrijving,verlof_reden, status")] Verlofaanvraag verlofaanvraag)
         {
             if (id != verlofaanvraag.ID)
             {
