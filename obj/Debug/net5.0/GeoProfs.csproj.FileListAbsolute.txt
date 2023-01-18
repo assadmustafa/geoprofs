@@ -154,3 +154,8 @@ C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags\Delete.cshtml.g.cs
 C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags\Details.cshtml.g.cs
 C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags\Edit.cshtml.g.cs
 C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags\Index.cshtml.g.cs
+C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags1\Create.cshtml.g.cs
+C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags1\Delete.cshtml.g.cs
+C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags1\Details.cshtml.g.cs
+C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags1\Edit.cshtml.g.cs
+C:\C#\GeoProfs\obj\Debug\net5.0\Razor\Views\Verlofaanvraags1\Index.cshtml.g.cs
