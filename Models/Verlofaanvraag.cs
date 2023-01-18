@@ -16,9 +16,9 @@ namespace GeoProfs.Models
 
     public enum status
     {
-        ziekgoedgekeurd,
-        afgekeurd,
-        processing
+        goedgekeurd = 0,
+        afgekeurd = 1,
+        processing = 2
     }
     public class Verlofaanvraag
     {
